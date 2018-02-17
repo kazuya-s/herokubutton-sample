@@ -1,0 +1,6 @@
+{
+    "name": "Heroku button sample",
+    "description": "Heroku button sample",
+    "repository": "https://github.com/kazuya-s/herokubutton-sample.git",
+    "keywords": ["java", "heroku"]
+  }
