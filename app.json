@@ -2,5 +2,34 @@
     "name": "Heroku button sample",
     "description": "Heroku button sample",
     "repository": "https://github.com/kazuya-s/herokubutton-sample.git",
-    "keywords": ["java", "heroku"]
-  }
+    "keywords": ["java", "heroku"],
+    "addons": [
+        {
+            "plan": "cloudamqp:lemur"
+        },
+        {
+            "plan": "heroku-redis:hobby-dev"
+        },
+        {
+            "plan": "heroku-postgresql:hobby-dev"
+        },
+        {
+            "plan": "sendgrid:starter"
+        },
+        {
+            "plan": "papertrail:choklad"
+        }
+    ],
+    "env": {
+        "AWS_ACCESS_KEY_ID": "(YOUR_AWS_ACCESS_KEY_ID)",
+        "AWS_SECRET_ACCESS_KEY": "(YOUR_AWS_SECRET_ACCESS_KEY)",
+        "S3_REGION": "(YOUR_S3_REGION)",
+        "S3_TMP_BUCKET_NAME": "(YOUR_S3_TMP_BUCKET_NAME)",
+        "S3_WORK_BUCKET_NAME": "(YOUR_S3_WORK_BUCKET_NAME)",
+        "S3_RESULT_BUCKET_NAME": "(YOUR_S3_RESULT_BUCKET_NAME)",
+        "EMAIL_REQ_REGISTER_MAIL_SUBJECT": "(YOUR_EMAIL_REQ_REGISTER_MAIL_SUBJECT)",
+        "EMAIL_REQ_REGISTER_MAIL_FROM": "(YOUR_EMAIL_REQ_REGISTER_MAIL_FROM)",
+        "QUEUE_REQUEST_QUEUE_NAME": "(YOUR_QUEUE_REQUEST_QUEUE_NAME)",
+        "SENDGRID_API_KEY": "(YOUR_SENDGRID_API_KEY)"
+    }
+}
